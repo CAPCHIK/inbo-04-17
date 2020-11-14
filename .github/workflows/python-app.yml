@@ -49,4 +49,4 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: |
-          latest
+          capchik/flask_app_example:latest
