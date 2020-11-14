@@ -50,3 +50,12 @@ jobs:
         push: true
         tags: |
           capchik/flask_app_example:latest
+    - name: update service
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          echo hello from ssh
+          echo 'hello from ssh' > file.txt
+        host: ${{ secrets.SSH_HOST }}
+        user: student
+        pass: ${{ secrets.SSH_PASSWORD }}
